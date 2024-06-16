@@ -2,7 +2,100 @@ body {
 	padding: 0;
 	margin: 0;
 	background-image: url("888");
+	overflow-x: hidden;
 }
+
+
+
+
+
+
+
+.footer {
+	position: relative;
+	width: 100%;
+	background-color: #3ea364;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .social-icon,
+  .menu {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+	flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+	list-style: none;
+  }
+  
+  .social-icon__link {
+	font-size: 2rem;
+	color: #fff;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0.5s;
+  }
+  .social-icon__link:hover {
+	transform: translateY(-10px);
+  }
+  
+  .menu__link {
+	font-size: 1.2rem;
+	color: #fff;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0.5s;
+	text-decoration: none;
+	opacity: 0.75;
+	font-weight: 300;
+  }
+  
+  .menu__link:hover {
+	opacity: 1;
+  }
+  
+  .footer p {
+	color: #fff;
+	margin: 15px 0 10px 0;
+	font-size: 1rem;
+	font-weight: 300;
+  }
+  
+
+
+
+
+// images ki css start here 
+
+.img-container {
+	width: 80%;
+	margin: 0 auto;
+	border: 11px solid black;
+	
+  }
+  
+  .img-container img {
+	width: 33.33%;
+	object-fit: cover;  /* Optional for aspect ratio preservation */
+	margin: 5px;  /* Add some margin for spacing */
+	border: 10px solid rgb(211, 199, 199);
+
+  }
+
+// images ki css end here 
+
+
+
 .container {
 	position: relative;
 	margin-top: 100px;
@@ -71,13 +164,18 @@ nav .icon-burger .line {
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
 }
-@media screen and (max-width: 768px) {
-	nav .logo {
+@media screen and (max-width: 768px)
+
+{
+	
+	nav .logo 
+	{
 		float: none;
 		width: auto;
 		justify-content: center;
 	}
-	nav .links {
+	nav .links
+	 {
 		float: none;
 		position: fixed;
 		z-index: 9;
@@ -115,14 +213,7 @@ nav .icon-burger .line {
 	
 }
 
-.youtube-link {
-	position: fixed;
-	left: 20px;
-	bottom: 20px;
-	color: #000;
-	text-decoration: none;
-	font-size: 12px;
-}
+
 
 /* ya 100%hai new container kwidth: ;
 height: 100vhe liya */
@@ -145,11 +236,6 @@ height: 100vhe liya */
 .swiper-slide img{
     width: 100%;
 } 
-
-.img2{
-	padding-top: 5%;
-	height: fit-content;
-}
 
 
 
@@ -174,63 +260,68 @@ h1 {
 	font-size: 20px;
 }
 
- /* .swiper .swiper-button-prev, .swiper .swiper-button-next{
-
-	font-size: 5px ;
-
-	
-} 
-  */
 
 
 
 
-
-/* 
-.img2{
-
-    margin-top: 170px;
-  
-  }
-   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-   .container22
+@media screen and (min-width: 100px) and (max-width: 576px)
 {
-	width:100% ;
-	height:100vh;
-	display: flex ;
-	margin-top: 170px;
+
+	.footer {
+		padding: 20px 20px; /* Adjust padding for smaller screens */
+		width: auto;
+		background-color: #3ea364;
+
+	  }
 	
-} */
+	  .social-icon__link,
+	  .menu__link {
+		font-size: 1.5rem; /* Decrease font size for smaller screens */
+		margin: 0 5px; /* Adjust margins */
+	  }
+	
+
+
+
+
+
+
+
+	nav {
+		width: 90vw;
+		display: flex; /* Use flexbox for layout */
+		justify-content: space-between; /* Align items horizontally */
+		align-items: center; /* Align items vertically */
+	  }
+	  nav a {
+		font-size: 0.8rem; /* Adjust font size for smaller screens */
+	  }
+	
+	  .whole-text-container
+	  {
+		margin-top: -130%;
+
+	  }
+	  
+	  .img-container img {
+		width: 33.33%;
+		object-fit: cover;  /* Optional for aspect ratio preservation */
+		margin: 5px;  /* Add some margin for spacing */
+	
+	  }
+
+	  .whatsapp
+	  {
+		margin-left: 200%;
+		margin-top: 90%;
+	  }
+
+
+}
+
+
+
+
+
+
+
