@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="contactcss.css"/>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
+
+
+
 <body>
   <div class="container">
     <img src="images/banners.jpg" width="100%">
@@ -24,6 +27,7 @@
           <i class="fas fa-phone-alt"></i>
           <div class="topic">Phone</div>
           <div class="text-one">+91 9212002637</div>
+          <div class="text-two">+91 8700464213</div>
           <div class="text-two">+91 7217806549</div>
         </div>
         <div class="email details">
@@ -38,26 +42,109 @@
         <p>If you have any work from us or any types of quries related , so you can send us message from here. It's my pleasure to help you.</p>
       <form action="#">
         <div class="input-box">
-          <input type="text" placeholder="Enter your name">
+          <input type="text"  id="Name" placeholder="Enter your name" required>
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Enter your email">
+          <input type="text"  id="Email" placeholder="Enter your email">
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Enter your contact no">
+          <input type="number" id="Contact" placeholder="Enter your contact no" required>
         </div>
+
+
+
+
+        <div class="input-box">
+          <input type="text"  id="subject" placeholder="subject">
+        </div>
+
+
+
+
         <!-- <div class="input-box message-box"> 
           </div>  -->
           <div class="input-box">
-            <input type="text" name="career[message]" class="form-control" tabindex="4" placeholder="Write your message" required>
+            <input type="text"  id="message"  name="career[message]" class="form-control" tabindex="4" placeholder="Write your message" required>
         </div>
         <div class="button">
-          <input type="button" value="Send Now" >
+          <input type="button" value="Send Now" onclick="Send()" >
+        </div>
+        <div class="button">
+          <input type="button" value="Back to Home Page" onclick="backToHomePage()" >
         </div>
       </form>
     </div>
     </div>
   </div>
+
+
+
+ 
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  <script>
+
+function backToHomePage() {
+    window.location.href = 'index.html';
+  }
+    function Send() 
+    {
+      var name = document.getElementById("Name").value;
+           var email = document.getElementById("Email").value;
+           var contact = document.getElementById("Contact").value;
+           var mess = document.getElementById("message").value;
+           var sub = document.getElementById("subject").value;
+           var body = "Name: " + name + "<br/> Email:" + email + "<br/> Contact Number:" + contact + "<br/> Message:" + mess;
+            
+         console.log(body);
+      Email.send({
+        SecureToken : "aca825f4-f596-4eee-9bff-952aa40f9434 ",
+
+      To : 'ps985094@gmail.com',
+      From : "ps985094@gmail.com",
+      Subject : sub,
+      Body : body
+
+    }).then(
+                message =>{
+                    if(message=='OK'){
+
+                        swal("Successfull", "Your Message successfully Send", "success");
+                    }
+                    else{
+
+                        swal("Something Wrong", "Your Data is not Received", "error");
+                    }
+                }
+              );   
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+
+
+
+
+
 
 
 
@@ -89,7 +176,9 @@
  </a>
  
   <!-- whatsapp floating button code end here  -->
- 
+
+
+
 
 
 
